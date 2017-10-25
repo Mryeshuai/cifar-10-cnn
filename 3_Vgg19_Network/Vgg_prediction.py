@@ -5,7 +5,10 @@ from PIL import Image
 import numpy as np
 import os.path
 
-model = VGG19(weights='imagenet')
+# Using ImageNet pre_trained weights to predict image's class(1000 class)
+# ImageNet -- http://www.image-net.org/
+
+model = VGG19(weights='imagenet') # load keras ImageNet pre_trained model
 
 while True:
 	img_path = input('Please input picture file to predict ( input Q to exit ):  ')
